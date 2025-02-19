@@ -17,10 +17,6 @@ class ServiceModule {
     fun providePixelsApi() = Retrofit
         .Builder()
         .baseUrl(PixelsApi.URL)
-        .client(
-            OkHttpClient.Builder().connectTimeout(5, TimeUnit.SECONDS)
-                .addInterceptor(HeaderInterceptor()).build()
-        )
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create(PixelsApi::class.java)

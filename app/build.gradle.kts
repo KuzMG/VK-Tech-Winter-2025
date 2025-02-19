@@ -40,6 +40,7 @@ android {
 }
 
 dependencies {
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
     val media3_version = "1.5.1"
     implementation("androidx.media3:media3-exoplayer:$media3_version")
     implementation("androidx.media3:media3-ui:$media3_version")
@@ -54,6 +55,7 @@ dependencies {
     implementation("com.squareup.picasso:picasso:$picasso_version")
 
 
+    implementation("androidx.fragment:fragment-ktx:1.8.4")
     val lifecycle_version="2.8.7"
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
