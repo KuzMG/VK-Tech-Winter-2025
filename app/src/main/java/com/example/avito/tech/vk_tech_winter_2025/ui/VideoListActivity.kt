@@ -1,8 +1,7 @@
-package com.example.avito.tech.vk_tech_winter_2025
+package com.example.avito.tech.vk_tech_winter_2025.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.avito.tech.vk_tech_winter_2025.databinding.ActivityVideoListBinding
