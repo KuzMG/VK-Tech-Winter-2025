@@ -65,7 +65,7 @@ class PixelsRepository @Inject constructor(
         for (video in videos) {
             videoDao.insert(VideoEntity(video.id, video.duration, video.user, video.image))
             videoFilesDao.insert(video.videoFiles.map {
-                VideoFileEntity(it.id,video.id, it.quality, it.link,it.width,it.height)
+                VideoFileEntity(it.id, video.id, it.quality, it.link, it.width, it.height)
             })
         }
     }

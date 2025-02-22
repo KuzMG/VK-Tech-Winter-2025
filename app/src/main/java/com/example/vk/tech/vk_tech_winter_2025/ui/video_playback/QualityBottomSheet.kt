@@ -10,18 +10,12 @@ import com.example.vk.tech.vk_tech_winter_2025.R
 import com.example.vk.tech.vk_tech_winter_2025.database.entity.video_file.VideoFile
 import com.example.vk.tech.vk_tech_winter_2025.databinding.QualityBottomSheetBinding
 import com.example.vk.tech.vk_tech_winter_2025.databinding.QualityItemBinding
-import com.example.vk.tech.vk_tech_winter_2025.utils.appComponent
-import com.example.vk.tech.vk_tech_winter_2025.utils.getParcelableArrayCompat
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class QualityBottomSheet : BottomSheetDialogFragment() {
     private lateinit var binding: QualityBottomSheetBinding
-    private val viewModel by viewModels<VideoPlaybackViewModel>({requireParentFragment()})
+    private val viewModel by viewModels<VideoPlaybackViewModel>({ requireParentFragment() })
 
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        videoFiles = arguments?.getParcelableArrayCompat(ARG_VIDEO_FILES) ?: arrayOf()
-//    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -44,12 +38,6 @@ class QualityBottomSheet : BottomSheetDialogFragment() {
 
     companion object {
         const val TAG = "QualityBottomSheet"
-        private const val ARG_VIDEO_FILES = "videoFiles"
-//        fun newInstance(videoFiles: ArrayList<VideoFile>) = QualityBottomSheet().apply {
-//            arguments = Bundle().apply {
-//                putParcelableArrayList(ARG_VIDEO_FILES, videoFiles)
-//            }
-//        }
     }
 
     inner class ViewHolder(private val binding: QualityItemBinding) :

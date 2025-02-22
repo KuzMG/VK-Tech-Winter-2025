@@ -34,7 +34,7 @@ class VideoPlaybackViewModel @Inject constructor(
         getVideo()
     }
 
-    fun setQuality(videoFile: VideoFile){
+    fun setQuality(videoFile: VideoFile) {
         mutableQualityLiveData.value = videoFile
     }
 
