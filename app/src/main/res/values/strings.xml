@@ -3,4 +3,8 @@
     <string name="vpn_exception">Для корректной работы включите VPN!</string>
     <string name="content_description_video_image">image</string>
     <string name="resolution">%1s x %2s</string>
+    <string name="content_description_prev">prev</string>
+    <string name="content_description_play_pause">play_pause</string>
+    <string name="content_description_next">next</string>
+    <string name="content_description_quality">quality</string>
 </resources>
