@@ -48,11 +48,13 @@ class VideoPlaybackFragment : Fragment() {
     @OptIn(UnstableApi::class)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.playerView.setControllerAnimationEnabled(false)
+
         viewModel.videoLiveData.observe(viewLifecycleOwner) { res ->
             res.run {
                 video?.let {
                    viewModel.videoFiles = it.videoFiles
-                    viewModel.setQuality(it.videoFiles[0])
+                    viewModel.setQuality(it.videoFiles[it.videoFiles.size-1])
                 }
                 error?.let {
                     Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
